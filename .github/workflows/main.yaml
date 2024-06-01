@@ -7,6 +7,8 @@ on:
     branches:
       - dev
 
+env:
+  Port: 3000
 
 jobs:
   build:
