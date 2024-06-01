@@ -7,6 +7,9 @@ on:
     branches:
       - dev
 
+env:
+  Port: 3000
+
 jobs:
   build:
     name: "Build Laravel App"
@@ -17,6 +20,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
+
+      - name: Setup Env
+        run: |
+          cp .env.ci .env
 
       - name: "Show Current directory"
         run: |
