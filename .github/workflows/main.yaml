@@ -28,6 +28,9 @@ jobs:
           pwd
           ls -a
 
+      - name: Git Checkout (Clone data to this action)
+        uses: actions/checkout@v4
+      
       - name: Install dependencies
         run: |
           composer install
