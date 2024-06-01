@@ -7,8 +7,6 @@ on:
     branches:
       - dev
 
-env:
-  Port: 3000
 
 jobs:
   build:
@@ -23,8 +21,7 @@ jobs:
 
       - name: Setup Env.ci
         run: |
-          cd /
-          cp ".env.ci" .env
+          cp .env.ci .env
 
       - name: "Show Current directory"
         run: |
