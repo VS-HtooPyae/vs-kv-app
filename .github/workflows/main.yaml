@@ -21,7 +21,7 @@ jobs:
         with:
           php-version: '8.2'
 
-      - name: Setup Env
+      - name: Setup Env.ci
         run: |
           cp .env.ci .env
 
