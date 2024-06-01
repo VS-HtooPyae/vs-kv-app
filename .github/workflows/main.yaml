@@ -21,6 +21,13 @@ jobs:
         with:
           php-version: '8.2'
 
+      - name: Git Checkout (Clone data to this action)
+        uses: actions/checkout@v4
+      
+      - name: Install dependencies
+        run: |
+          composer install
+          
       - name: "Show Current directory"
         run: |
           pwd
@@ -30,13 +37,6 @@ jobs:
         run: |
           cp .env.ci .env
 
-      - name: Git Checkout (Clone data to this action)
-        uses: actions/checkout@v4
-      
-      - name: Install dependencies
-        run: |
-          composer install
-          
       - name: Build the Application
         run: |
           php artisan key:generate
