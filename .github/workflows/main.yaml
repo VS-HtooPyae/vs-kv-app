@@ -1,5 +1,7 @@
 name: "Main Workflow"
 
+
+# trigger
 on:
   pull_request:
     branches:
@@ -11,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Hello
+      - name: Install dependencies
         run: |
-          echo "Hello"
+          composer install
 
 
