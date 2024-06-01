@@ -26,7 +26,8 @@ jobs:
       - name: "Show Current directory"
         run: |
           pwd
-          
+          ls -a
+
       - name: Install dependencies
         run: |
           composer install
