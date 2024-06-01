@@ -23,6 +23,7 @@ jobs:
 
       - name: Setup Env.ci
         run: |
+          cd ..
           cp .env.ci .env
 
       - name: "Show Current directory"
